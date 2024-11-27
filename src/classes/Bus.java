@@ -2,7 +2,7 @@ package classes;
 
 public class Bus implements Comparable<Bus> {
 
-    private Integer number;
+    private String number;
     private String model;
     private Integer mileage;
 
@@ -12,7 +12,7 @@ public class Bus implements Comparable<Bus> {
         this.mileage = busBuilder.mileage;
     }
 
-    public Integer getNumber() {
+    public String getNumber() {
         return this.number;
     }
 
@@ -25,11 +25,11 @@ public class Bus implements Comparable<Bus> {
     }
 
     public static class BusBuilder {
-        private Integer number;
+        private String number;
         private String model;
         private Integer mileage;
 
-        public BusBuilder setNumber(Integer number) {
+        public BusBuilder setNumber(String number) {
             this.number = number;
             return this;
         }

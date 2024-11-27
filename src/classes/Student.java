@@ -2,7 +2,7 @@ package classes;
 
 public class Student implements Comparable<Student> {
 
-    private Integer groupNumber;
+    private String groupNumber;
     private Double averageScore;
     private Integer studentIdCard;
 
@@ -12,7 +12,7 @@ public class Student implements Comparable<Student> {
         this.studentIdCard = studentBuilder.studentIdCard;
     }
 
-    public Integer getGroupNumber() {
+    public String getGroupNumber() {
         return this.groupNumber;
     }
 
@@ -25,11 +25,11 @@ public class Student implements Comparable<Student> {
     }
 
     public static class StudentBuilder {
-        private Integer groupNumber;
+        private String groupNumber;
         private Double averageScore;
         private Integer studentIdCard;
 
-        public StudentBuilder setGroupNumber(Integer groupNumber) {
+        public StudentBuilder setGroupNumber(String groupNumber) {
             this.groupNumber = groupNumber;
             return this;
         }
