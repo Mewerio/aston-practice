@@ -2,14 +2,20 @@ package classes;
 
 public class User implements Comparable<User>{
 
+    private Integer id;
     private String userName;
     private String password;
     private String email;
 
     private User(UserBuilder userBuilder) {
+        this.id = userBuilder.id;
         this.userName = userBuilder.userName;
         this.password = userBuilder.password;
         this.email = userBuilder.email;
+    }
+
+    public Integer getId() {
+        return this.id;
     }
 
     public String getUserName() {
@@ -25,10 +31,15 @@ public class User implements Comparable<User>{
     }
 
     public static class UserBuilder {
+        private Integer id;
         private String userName;
         private String password;
         private String email;
 
+        public  UserBuilder setUserId(Integer id){
+            this.id = id;
+            return this;
+        }
 
         public UserBuilder setUserName(String userName) {
             this.userName = userName;
@@ -76,10 +87,10 @@ public class User implements Comparable<User>{
 
     @Override
     public String toString() {
-        return "User{" +
+        return "User [" +
                 "userName='" + userName + '\'' +
                 ", password=" + password +
                 ", email='" + email + '\'' +
-                '}';
+                ']';
     }
 }

@@ -1,15 +1,20 @@
 package classes;
 
 public class Bus implements Comparable<Bus> {
-
+    private Integer id;
     private String number;
     private String model;
     private Integer mileage;
 
     private Bus(BusBuilder busBuilder) {
+        this.id = busBuilder.id;
         this.number = busBuilder.number;
         this.model = busBuilder.model;
         this.mileage = busBuilder.mileage;
+    }
+
+    public Integer getId() {
+        return this.id;
     }
 
     public String getNumber() {
@@ -25,9 +30,15 @@ public class Bus implements Comparable<Bus> {
     }
 
     public static class BusBuilder {
+        private Integer id;
         private String number;
         private String model;
         private Integer mileage;
+
+        public BusBuilder setBusId(Integer id) {
+            this.id = id;
+            return this;
+        }
 
         public BusBuilder setNumber(String number) {
             this.number = number;
@@ -51,21 +62,21 @@ public class Bus implements Comparable<Bus> {
 
     @Override
     public int compareTo(Bus o) {
-        if(this.number != null && o.number != null){
+        if (this.number != null && o.number != null) {
             int compareNumber = this.number.compareTo(o.number);
             if (compareNumber != 0) {
                 return compareNumber;
             }
         }
 
-        if(this.model != null && o.model != null){
+        if (this.model != null && o.model != null) {
             int compareModel = this.model.compareTo(o.model);
             if (compareModel != 0) {
                 return compareModel;
             }
         }
 
-        if(this.mileage != null && o.mileage != null){
+        if (this.mileage != null && o.mileage != null) {
             return this.mileage.compareTo(o.mileage);
         }
 
@@ -74,10 +85,10 @@ public class Bus implements Comparable<Bus> {
 
     @Override
     public String toString() {
-        return "Bus{" +
+        return "Bus [" +
                 "number='" + number + '\'' +
                 ", model=" + model +
                 ", mileage='" + mileage + '\'' +
-                '}';
+                ']';
     }
 }
