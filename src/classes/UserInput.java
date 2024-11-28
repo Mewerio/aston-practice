@@ -34,12 +34,14 @@ public class UserInput implements InputData {
                         User user = new User.UserBuilder().setUserName(firstVar)
                                 .setPassword(secondVar).setEmail(thirdVar).build();
                         list.add(user);
+                        break;
 
                     case "student":
                         Student student = new Student.StudentBuilder().setGroupNumber(firstVar).
                                 setAverageScore(Double.parseDouble(secondVar))
                                 .setStudentIdCard(Integer.parseInt(thirdVar)).build();
                         list.add(student);
+                        break;
 
                     default: break;
                 }
