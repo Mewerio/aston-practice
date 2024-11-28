@@ -1,6 +1,8 @@
 package classes;
 
-public class Student implements Comparable<Student> {
+import interfaces.Identifiable;
+
+public class Student implements Identifiable, Comparable<Student> {
 
     private Integer id;
     private String groupNumber;
@@ -14,7 +16,7 @@ public class Student implements Comparable<Student> {
         this.studentIdCard = studentBuilder.studentIdCard;
     }
 
-    public  Integer getId(){
+    public Integer getId(){
         return this.id;
     }
 
@@ -87,6 +89,7 @@ public class Student implements Comparable<Student> {
     @Override
     public String toString() {
         return "Student [" +
+                "id='" + id + '\'' +
                 "groupNumber='" + groupNumber + '\'' +
                 ", averageScore=" + averageScore +
                 ", studentIdCard='" + studentIdCard + '\'' +

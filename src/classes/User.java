@@ -1,6 +1,8 @@
 package classes;
 
-public class User implements Comparable<User>{
+import interfaces.Identifiable;
+
+public class User implements Identifiable, Comparable<User>{
 
     private Integer id;
     private String userName;
@@ -88,6 +90,7 @@ public class User implements Comparable<User>{
     @Override
     public String toString() {
         return "User [" +
+                "id='" + id + '\'' +
                 "userName='" + userName + '\'' +
                 ", password=" + password +
                 ", email='" + email + '\'' +

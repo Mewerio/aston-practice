@@ -1,5 +1,6 @@
 package sorting;
 
+import interfaces.Identifiable;
 import interfaces.SortingStrategy;
 
 import java.util.List;
@@ -7,7 +8,7 @@ import java.util.List;
 public class SelectionSort implements SortingStrategy {
 
     @Override
-    public <T extends Comparable<T>> void sort(List<T> list) {
+    public <T extends Identifiable & Comparable<T>> void sort(List<T> list) {
         int n = list.size();
 
         for (int i = 0; i < n - 1; i++) {

@@ -1,6 +1,8 @@
 package classes;
 
-public class Bus implements Comparable<Bus> {
+import interfaces.Identifiable;
+
+public class Bus implements Identifiable, Comparable<Bus> {
     private Integer id;
     private String number;
     private String model;
@@ -86,6 +88,7 @@ public class Bus implements Comparable<Bus> {
     @Override
     public String toString() {
         return "Bus [" +
+                "id='" + id + '\'' +
                 "number='" + number + '\'' +
                 ", model=" + model +
                 ", mileage='" + mileage + '\'' +
