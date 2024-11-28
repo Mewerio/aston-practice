@@ -22,23 +22,26 @@ public class UserInput implements InputData {
                 String secondVar = str[2];
                 String thirdVar = str[3];
 
-                if (classType.equalsIgnoreCase("bus") && Integer.parseInt(thirdVar) >= 0) {
-                    Bus bus = new Bus.BusBuilder().setNumber(firstVar)
+                switch (classType) {
+
+                    case "bus":
+                        Bus bus = new Bus.BusBuilder().setNumber(firstVar)
                             .setModel(secondVar).setMileage(Integer.parseInt(thirdVar)).build();
-                    list.add(bus);
-                } else if (classType.equalsIgnoreCase("user")) {
-                    User user = new User.UserBuilder().setUserName(firstVar)
-                            .setPassword(secondVar).setEmail(thirdVar).build();
-                    list.add(user);
-                } else if (classType.equalsIgnoreCase("student")
-                        && Double.parseDouble(secondVar) >= 2.0 && Double.parseDouble(secondVar) <= 5.0) {
-                    Student student = new Student.StudentBuilder().setGroupNumber(firstVar).
-                            setAverageScore(Double.parseDouble(secondVar))
-                            .setStudentIdCard(Integer.parseInt(thirdVar)).build();
-                    list.add(student);
-                } else {
-                    System.out.println("Данные введены с ошибками");
-                    break;
+                        list.add(bus);
+                        break;
+
+                    case "user":
+                        User user = new User.UserBuilder().setUserName(firstVar)
+                                .setPassword(secondVar).setEmail(thirdVar).build();
+                        list.add(user);
+
+                    case "student":
+                        Student student = new Student.StudentBuilder().setGroupNumber(firstVar).
+                                setAverageScore(Double.parseDouble(secondVar))
+                                .setStudentIdCard(Integer.parseInt(thirdVar)).build();
+                        list.add(student);
+
+                    default: break;
                 }
 
             }
