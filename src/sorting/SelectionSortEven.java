@@ -3,7 +3,6 @@ package sorting;
 import interfaces.Identifiable;
 import interfaces.SortingStrategy;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
