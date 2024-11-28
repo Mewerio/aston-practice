@@ -1,15 +1,23 @@
 package classes;
 
-public class Student implements Comparable<Student> {
+import interfaces.Identifiable;
 
+public class Student implements Identifiable, Comparable<Student> {
+
+    private Integer id;
     private String groupNumber;
     private Double averageScore;
     private Integer studentIdCard;
 
     private Student(StudentBuilder studentBuilder) {
+        this.id = studentBuilder.id;
         this.groupNumber = studentBuilder.groupNumber;
         this.averageScore = studentBuilder.averageScore;
         this.studentIdCard = studentBuilder.studentIdCard;
+    }
+
+    public Integer getId(){
+        return this.id;
     }
 
     public String getGroupNumber() {
@@ -25,9 +33,15 @@ public class Student implements Comparable<Student> {
     }
 
     public static class StudentBuilder {
+        private Integer id;
         private String groupNumber;
         private Double averageScore;
         private Integer studentIdCard;
+
+        public StudentBuilder setStudentId(Integer id){
+            this.id = id;
+            return this;
+        }
 
         public StudentBuilder setGroupNumber(String groupNumber) {
             this.groupNumber = groupNumber;
@@ -74,11 +88,12 @@ public class Student implements Comparable<Student> {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student [" +
+                "id='" + id + '\'' +
                 "groupNumber='" + groupNumber + '\'' +
                 ", averageScore=" + averageScore +
                 ", studentIdCard='" + studentIdCard + '\'' +
-                '}';
+                ']';
     }
 }
 
