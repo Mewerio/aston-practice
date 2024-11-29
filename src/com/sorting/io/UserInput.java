@@ -1,5 +1,8 @@
 package com.sorting.io;
-import interfaces.InputData;
+
+import com.sorting.data.Bus;
+import com.sorting.data.Student;
+import com.sorting.data.User;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,14 +10,12 @@ import java.util.Scanner;
 public class UserInput implements InputData {
 
     @Override
-    public List<Comparable> getData(Scanner scanner) {
-
-        int length = scanner.nextInt();
+    public List<Comparable> getData(Scanner scanner, Integer size) {
         scanner.nextLine();
         List<Comparable> list = new ArrayList<>();
 
         try {
-            for (int i = 0; i < length; i++) {
+            for (int i = 0; i < size; i++) {
 
                 String[] str = scanner.nextLine().split(",");
                 String classType = str[0];
