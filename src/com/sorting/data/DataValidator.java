@@ -1,4 +1,4 @@
-package com.sorting.interfaces;
+package com.sorting.data;
 
 interface DataValidator<T> {
     boolean isValid(T data);

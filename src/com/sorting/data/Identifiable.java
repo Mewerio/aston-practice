@@ -1,4 +1,4 @@
-package com.sorting.interfaces;
+package com.sorting.data;
 
 public interface Identifiable {
     Integer getId();

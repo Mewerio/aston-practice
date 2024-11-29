@@ -1,4 +1,4 @@
-package com.sorting.interfaces;
+package com.sorting.sort;
 
 import java.util.List;
 
