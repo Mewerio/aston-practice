@@ -1,4 +1,4 @@
-package classes;
+package com.sorting.io;
 import interfaces.InputData;
 import java.util.ArrayList;
 import java.util.List;

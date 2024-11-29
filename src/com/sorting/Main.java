@@ -1,7 +1,4 @@
-import classes.Bus;
-import files.InputFile;
-import files.OutputFile;
-
+package com.sorting;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;

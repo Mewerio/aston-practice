@@ -1,6 +1,6 @@
 package classes;
 
-import interfaces.Identifiable;
+import com.sorting.data;
 
 public class Student implements Identifiable, Comparable<Student> {
 

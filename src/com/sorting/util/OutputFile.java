@@ -1,4 +1,4 @@
-package files;
+package com.sorting.util;
 
 import classes.Bus;
 import classes.Student;

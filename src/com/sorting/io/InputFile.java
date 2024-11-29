@@ -1,4 +1,4 @@
-package files;
+package com.sorting.io;
 
 import classes.*;
 import interfaces.InputData;

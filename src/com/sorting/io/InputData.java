@@ -1,4 +1,4 @@
-package interfaces;
+package com.sorting.io;
 import java.util.List;
 import java.util.Scanner;
 
