@@ -22,11 +22,11 @@ public class Main {
 
         List<Comparable> list;
         try {
-             list =  new InputFile().getData(new Scanner(Paths.get("src/file.txt")), 0);
+            list = new InputFile().getData(new Scanner(Paths.get("src/file.txt")), 0);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        for (Comparable check: list){
+        for (Comparable check : list) {
             System.out.println(check.toString());
         }
 
