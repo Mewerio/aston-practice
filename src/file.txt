@@ -1,4 +1,6 @@
-some,for,check
-second,for,check
-error
-niwq,awd
+user,andrey,aaa,buh@mail.ru;
+user,vasya,vvv,bah@mail.ru;
+user,name,pas,email@mail.ru;
+user,andrey,aaa,buh@mail.ru;
+user,vasya,vvv,bah@mail.ru;
+user,name,pas,email@mail.ru;

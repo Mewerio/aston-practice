@@ -1,28 +1,50 @@
 package files;
 
-import interfaces.InputData;
+import classes.Bus;
+import classes.Student;
+import classes.User;
 
-import java.util.ArrayList;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.List;
-import java.util.Scanner;
 
-public class OutputFile implements InputData {
+public final class OutputFile {
 
+    public static <E> void toFile(String filename, List<E> list) {
 
-    @Override
-    public List<Comparable> getData(Scanner scanner) {
-        List<Comparable> data = new ArrayList<>();
-        scanner.useDelimiter("\\n");
-        String str = "";
-        while (scanner.hasNext()) {
-            str += scanner.next();
-            System.out.println(str);
+        try (BufferedWriter bufferWriter = new BufferedWriter(new FileWriter(filename, true))) {
+
+            for (E listToFile : list) {
+                bufferWriter.write(ValidateToFile.convert(listToFile));
+            }
+
+        } catch (IOException e) {
+            System.out.println(e);
         }
 
-        return data;
     }
 
+    private static class ValidateToFile {
 
+        static <E> String convert(E obj) {
+            return switch (obj.getClass().getSimpleName().toLowerCase()) {
+                case "bus" -> {
+                    Bus bus = (Bus) obj;
+                    yield bus.getClass().getSimpleName().toLowerCase() + ',' + bus.getNumber() + ',' + bus.getModel() + ',' + bus.getMileage() + ";\r\n";
+                }
+                case "user" -> {
+                    User user = (User) obj;
+                    yield user.getClass().getSimpleName().toLowerCase() + ',' + user.getUserName() + ',' + user.getPassword() + ',' + user.getEmail() + ";\r\n";
+                }
+                case "student" -> {
+                    Student student = (Student) obj;
+                    yield student.getClass().getSimpleName().toLowerCase() + ',' + student.getGroupNumber() + ',' + student.getAverageScore() + ',' + student.getStudentIdCard() + ";\r\n";
+                }
+                default -> "Error";
+            };
+        }
+    }
 
 
 }

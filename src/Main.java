@@ -1,8 +1,11 @@
 import classes.Bus;
+import files.InputFile;
 import files.OutputFile;
 
 import java.io.IOException;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -11,17 +14,26 @@ public class Main {
         Bus bus = new Bus.BusBuilder().setNumber("222").setModel("Volkswagen").setMileage(15000).build();
         System.out.println(bus.toString());
 
-        Comparable<Bus> bus1 = new Bus.BusBuilder().setNumber("2145").setModel("Volkswagen").setMileage(15000).build();
+        Comparable bus1 = new Bus.BusBuilder().setNumber("2145").setModel("Volkswagen").setMileage(15000).build();
         System.out.println(bus1.toString());
 
         String nameClass = bus1.getClass().getSimpleName();
         System.out.println(nameClass);
 
-        OutputFile outputFile = new OutputFile();
+        List<Comparable> list;
         try {
-            outputFile.getData(new Scanner(Paths.get("src/file.txt")));
+             list =  new InputFile().getData(new Scanner(Paths.get("src/file.txt")), 0);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+        for (Comparable check: list){
+            System.out.println(check.toString());
+        }
+
+        List<Comparable> list1 = new ArrayList<>();
+        list1.add(bus);
+        list1.add(bus1);
+        list1.add(bus);
+        OutputFile.toFile("src/test.txt", list1);
     }
 }
