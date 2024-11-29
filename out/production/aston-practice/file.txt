@@ -1,6 +1,0 @@
-user,andrey,aA1aaaaa,buh@mail.ru;
-user,vasya,aA1aaaaa,bah@mail.ru;
-user,name,aA1aaaaa,email@mail.ru;
-user,andrey,aA1aaaaa,buh@mail.ru;
-user,vasya,aA1aaaaa,bah@mail.ru;
-user,name,aA1aaaaa,email@mail.ru;
