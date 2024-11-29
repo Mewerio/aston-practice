@@ -1,8 +1,6 @@
-package classes;
+package com.sorting.data;
 
-import com.sorting.data;
-
-public class Student implements Identifiable, Comparable<Student> {
+public class Student implements Identifiable<Student> {
 
     private Integer id;
     private String groupNumber;

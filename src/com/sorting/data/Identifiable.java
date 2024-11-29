@@ -1,5 +1,6 @@
 package com.sorting.data;
 
-public interface Identifiable {
+
+public interface Identifiable<T> extends Comparable<T> {
     Integer getId();
 }

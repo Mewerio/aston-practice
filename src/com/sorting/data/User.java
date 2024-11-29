@@ -1,8 +1,6 @@
-package classes;
+package com.sorting.data;
 
-import com.sorting.data;
-
-public class User implements Identifiable, Comparable<User>{
+public class User implements Identifiable<User>{
 
     private Integer id;
     private String userName;

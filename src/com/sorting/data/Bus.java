@@ -1,8 +1,6 @@
-package classes;
+package com.sorting.data;
 
-import com.sorting.data;
-
-public class Bus implements Identifiable, Comparable<Bus> {
+public class Bus implements Identifiable<Bus> {
     private Integer id;
     private String number;
     private String model;
