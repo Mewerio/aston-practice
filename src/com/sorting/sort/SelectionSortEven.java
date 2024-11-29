@@ -1,15 +1,13 @@
 package com.sorting.sort;
 
-import interfaces.Identifiable;
-import interfaces.SortingStrategy;
-
+import com.sorting.data.Identifiable;
 import java.util.ArrayList;
 import java.util.List;
 
 public class SelectionSortEven implements SortingStrategy {
 
     @Override
-    public <T extends Identifiable & Comparable<T>> void sort(List<T> list) {
+    public <T extends Identifiable<T>> void sort(List<T> list) {
 
         List<T> evenObjects = new ArrayList<>();
 
