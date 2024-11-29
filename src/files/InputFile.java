@@ -3,9 +3,7 @@ package files;
 import classes.*;
 import interfaces.InputData;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public final class InputFile implements InputData {
 
@@ -25,6 +23,7 @@ public final class InputFile implements InputData {
 
         for (String part : partObj) {
 
+            if (new ValidDataFromFile().validate(part) != 1 ) continue;
             String[] words = part.split(",");
 
             Comparable object;
@@ -54,6 +53,8 @@ public final class InputFile implements InputData {
             }
         }
 
+        if (data.size() > size) data.removeAll(data.subList(size, data.size()));
+        else if (data.size() < size) return Collections.emptyList();
         return data;
     }
 }

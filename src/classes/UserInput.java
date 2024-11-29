@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class UserInput implements InputData {
 
     @Override
-    public List<Comparable> getData(Scanner scanner) {
+    public List<Comparable> getData(Scanner scanner, Integer size) {
 
         int length = scanner.nextInt();
         scanner.nextLine();

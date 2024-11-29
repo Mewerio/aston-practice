@@ -22,7 +22,7 @@ public class Main {
 
         List<Comparable> list;
         try {
-            list = new InputFile().getData(new Scanner(Paths.get("src/file.txt")), 0);
+            list = new InputFile().getData(new Scanner(Paths.get("src/file.txt")), 6);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -30,10 +30,10 @@ public class Main {
             System.out.println(check.toString());
         }
 
-        List<Comparable> list1 = new ArrayList<>();
-        list1.add(bus);
-        list1.add(bus1);
-        list1.add(bus);
-        OutputFile.toFile("src/test.txt", list1);
+//        List<Comparable> list1 = new ArrayList<>();
+//        list1.add(bus);
+//        list1.add(bus1);
+//        list1.add(bus);
+//        OutputFile.toFile("src/test.txt", list1);
     }
 }

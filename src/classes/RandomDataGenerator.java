@@ -22,7 +22,7 @@ public class RandomDataGenerator implements InputData {
     int maxID = 9999;
 
     @Override
-    public List<Comparable> getData(Scanner scanner) {
+    public List<Comparable> getData(Scanner scanner, Integer size) {
 
         int length = scanner.nextInt();
         List<Comparable> list = new ArrayList<>();
