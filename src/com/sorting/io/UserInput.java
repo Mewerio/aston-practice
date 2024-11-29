@@ -54,7 +54,7 @@ public class UserInput implements InputData {
             System.out.println("Данные введены с ошибками");
         }
 
-        if (list.size() != length) return null;
+        if (list.size() != size) return null;
         else return list;
     }
 }
