@@ -1,6 +1,4 @@
-package files;
-
-import interfaces.ValidData;
+package com.sorting.data;
 
 import java.util.regex.Pattern;
 

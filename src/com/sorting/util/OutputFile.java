@@ -1,8 +1,8 @@
-package files;
+package com.sorting.util;
 
-import classes.Bus;
-import classes.Student;
-import classes.User;
+import com.sorting.data.Bus;
+import com.sorting.data.Student;
+import com.sorting.data.User;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

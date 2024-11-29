@@ -1,4 +1,6 @@
-package interfaces;
+package com.sorting.sort;
+
+import com.sorting.data.Identifiable;
 
 import java.util.List;
 

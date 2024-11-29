@@ -1,6 +1,4 @@
-package classes;
-
-import interfaces.Identifiable;
+package com.sorting.data;
 
 public class Bus implements Identifiable, Comparable<Bus> {
     private Integer id;

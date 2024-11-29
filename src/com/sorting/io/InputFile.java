@@ -1,7 +1,9 @@
-package files;
+package com.sorting.io;
 
-import classes.*;
-import interfaces.InputData;
+import com.sorting.data.Bus;
+import com.sorting.data.Student;
+import com.sorting.data.User;
+import com.sorting.data.ValidDataFromFile;
 
 import java.util.*;
 

@@ -1,10 +1,10 @@
-import classes.Bus;
-import files.InputFile;
-import files.OutputFile;
+package com.sorting;
+
+import com.sorting.data.Bus;
+import com.sorting.io.InputFile;
 
 import java.io.IOException;
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
